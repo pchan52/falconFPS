@@ -17,7 +17,6 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKey (KeyCode.C)) {
-			print ("aa");
 			transform.position = new Vector3 (transform.position.x, 4f, transform.position.z);
 			gameObject.GetComponent<FirstPersonController>().m_WalkSpeed = 2f;
 		}
