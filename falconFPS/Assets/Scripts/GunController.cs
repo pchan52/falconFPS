@@ -7,39 +7,37 @@ public class GunController : MonoBehaviour {
 	[SerializeField] private int bulletBox;
 	[SerializeField] private int bullet;
 	[SerializeField] private GameObject firePrefs;
-
+	[SerializeField] private GameObject fireMuzzlePrefs;
 	[SerializeField] private AudioClip shotSound;
+	[SerializeField] private GameObject muzzle;
+
 	AudioSource audioSource;
 
-	private bool isEmpty; 
+	public bool isEmpty; 
+
 
 	// Use this for initialization
 	void Start () {
-		audioSource = gameObject.GetComponent<AudioSource> ();
 		isEmpty = false;
+		audioSource = gameObject.GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-
-		Ray ray = new Ray(transform.position, transform.up);
-		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit)) {
-			if (Input.GetMouseButton (0) && !isEmpty) {
-				Shot (hit.point);
-				UseBullet ();
-			}
-		}
 	}
 		
-	void Shot(Vector3 hitposition){
-		GameObject fire = Instantiate (firePrefs);
-		fire.transform.position = hitposition;
+	public void Shot(Vector3 hitposition){
+		GameObject firehit = Instantiate (firePrefs);
+		firehit.transform.position = hitposition;
+		GameObject firemuzzle = Instantiate (fireMuzzlePrefs);
+		firemuzzle.transform.position = muzzle.transform.position;
 		audioSource.PlayOneShot (shotSound);
-		Destroy (fire, 0.5f);
+
+		Destroy (firehit, 0.5f);
+		Destroy (firemuzzle, 0.3f);
 	}
 
-	void UseBullet(){
+	public void UseBullet(){
 		bullet--;
 		if (bullet == 0) {
 			isEmpty = true;
