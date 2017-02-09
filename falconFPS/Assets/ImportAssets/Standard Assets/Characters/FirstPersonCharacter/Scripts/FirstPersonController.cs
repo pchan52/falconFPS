@@ -30,6 +30,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
 
+		[SerializeField] private float nomalHight;
 		[SerializeField] private float squatHight;
 
         private Camera m_Camera;
@@ -86,8 +87,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-			if(Input.GetKey(KeyCode.C)){
-				transform.position = new Vector3(transform.position.x, squatHight, transform.position.z);
+			if (Input.GetKey (KeyCode.C)) {
+				transform.position = new Vector3 (transform.position.x, squatHight, transform.position.z);
+			} else {
+				transform.position = new Vector3 (transform.position.x, nomalHight, transform.position.z);
 			}
 			
         }
