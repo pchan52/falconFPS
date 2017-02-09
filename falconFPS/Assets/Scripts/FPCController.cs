@@ -18,10 +18,13 @@ public class FPCController : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit)) {
 			if (Input.GetMouseButton (0) && !gun.isEmpty) {
-
 				gun.Shot (hit.point);
 				gun.UseBullet ();
 			}
+		}
+
+		if(Input.GetKeyDown(KeyCode.R)){
+			gun.ReloadBullet ();
 		}
 	}
 }
