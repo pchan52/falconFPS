@@ -20,6 +20,12 @@ public class FPCController : MonoBehaviour {
 			if (Input.GetMouseButton (0) && !gun.isEmpty) {
 				gun.Shot (hit.point);
 				gun.UseBullet ();
+				TargetController target = hit.collider.gameObject.GetComponent<TargetController> ();
+				print (hit.collider.gameObject.name);
+				print (hit.point);
+				if (target != null) {
+					target.Hit ();
+				}
 			}
 		}
 
