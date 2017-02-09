@@ -6692,7 +6692,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 121.5
+      value: 133.79
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_LocalRotation.x
@@ -31221,12 +31221,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b71f29cbc1d545e6925b6b450daca79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletBox: 0
-  bullet: 30
+  bulletBox: 10
+  bullet: 10
   firePrefs: {fileID: 1916317608453738, guid: 3d614cfa15b7a43cb8e9ca1b85d1dc89, type: 2}
   fireMuzzlePrefs: {fileID: 1916317608453738, guid: e68bdc81854b3417c9b908efbca822e4,
     type: 2}
   shotSound: {fileID: 8300000, guid: 8602b7d5cd15c1943a50aa53f171c8cf, type: 3}
+  reloadSound: {fileID: 8300000, guid: 3c5c1d4d7b9307c458890a4beb12e4ae, type: 3}
   muzzle: {fileID: 1245208814}
   isEmpty: 0
 --- !u!82 &1964651664

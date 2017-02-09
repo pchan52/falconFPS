@@ -49,7 +49,7 @@ public class GunController : MonoBehaviour {
 	public void ReloadBullet(){
 		useBullet = 0;
 		useBullet = 30 - bullet;
-		if (useBullet != 0 || bulletBox != 0) { // 使用数が0のとき 弾倉が0のときはリロード出来ない
+		if (useBullet != 0 && bulletBox != 0) { // 使用数が0のとき 弾倉が0のときはリロード出来ない
 			if (bulletBox >= useBullet) { // 弾倉 >= 使用数 のとき 使用数分補充
 				bulletBox -= useBullet;
 				bullet += useBullet;
