@@ -30,7 +30,7 @@ public class GunController : MonoBehaviour {
 		
 	public void Shot(Vector3 hitposition){
 		GameObject firehit = Instantiate (firePrefs);
-		firehit.transform.position = hitposition;
+		firehit.transform.position = hitposition - new Vector3 (0, 0, 0.5f);;
 		GameObject firemuzzle = Instantiate (fireMuzzlePrefs);
 		firemuzzle.transform.position = muzzle.transform.position;
 		audioSource.PlayOneShot (shotSound);
@@ -59,6 +59,7 @@ public class GunController : MonoBehaviour {
 				bulletBox = 0;
 				audioSource.PlayOneShot (reloadSound);
 			}
+			isEmpty = false;
 		}
 	}
 
