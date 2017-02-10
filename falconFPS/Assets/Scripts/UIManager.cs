@@ -5,14 +5,17 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
+	[SerializeField] Image Sniper;
 	[SerializeField] Text LeftTime;
 	[SerializeField] Text Score;
 	[SerializeField] Text Bullet;
 	[SerializeField] Text BulletBox;
 	[SerializeField] ScoreManager scoreManager;
 	[SerializeField] GunController gunController;
+	[SerializeField] FPCController FPCController;
 
 	float time;
+
 
 	// Use this for initialization
 	void Start () {
@@ -26,5 +29,11 @@ public class UIManager : MonoBehaviour {
 		Score.text = "Pt : " + scoreManager.score;
 		Bullet.text = "Bullet : " + gunController.bullet + "/30";
 		BulletBox.text = "BulletBox : " + gunController.bulletBox;
+
+		if (FPCController.sniper == -1) {
+			Sniper.enabled = false;
+		} else {
+			Sniper.enabled = true;
+		}
 	}
 }

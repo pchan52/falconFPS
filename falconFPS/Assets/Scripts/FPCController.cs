@@ -7,9 +7,13 @@ public class FPCController : MonoBehaviour {
 	[SerializeField] GameObject gunobj;
 	[SerializeField] GameObject scoreManager;
 	[SerializeField] LayerMask layermask;
+	[SerializeField] Camera camera;
+	[SerializeField] float offset;
 
 	GunController gun;
 	ScoreManager score;
+
+	public int sniper = -1; // -1 : not sniper  1 : sniper
 	// Use this for initialization
 	void Start () {
 		gun = gunobj.GetComponent<GunController> ();
@@ -31,9 +35,27 @@ public class FPCController : MonoBehaviour {
 				}
 			}
 		}
+			
+		Reload ();
+		Snip ();
 
+	}
+
+	void Reload(){
 		if(Input.GetKeyDown(KeyCode.R)){
 			gun.ReloadBullet ();
 		}
 	}
+
+	void Snip(){
+		if (Input.GetMouseButton (1)) {
+			sniper = sniper * (-1);
+			if (sniper == -1) {
+				camera.fieldOfView += offset;
+			} else {
+				camera.fieldOfView -= offset;
+			}
+		}
+	}
+		
 }
