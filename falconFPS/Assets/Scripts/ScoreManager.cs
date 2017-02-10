@@ -22,7 +22,6 @@ public class ScoreManager : MonoBehaviour {
 		Vector2 hitposition2 = hitposition; 
 		Vector2 headmarker2 = HeadMarker.transform.position;
 		float distance = Vector2.Distance (hitposition2, headmarker2); //x-y平面における距離にする
-		print(distance);
 		score += Score (distance);
 		print (score);
 	}
