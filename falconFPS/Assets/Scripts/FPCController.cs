@@ -5,11 +5,14 @@ using UnityEngine;
 public class FPCController : MonoBehaviour {
 
 	[SerializeField] GameObject gunobj;
-	GunController gun;
+	[SerializeField] GameObject scoreManager;
 
+	GunController gun;
+	ScoreManager score;
 	// Use this for initialization
 	void Start () {
 		gun = gunobj.GetComponent<GunController> ();
+		score = scoreManager.GetComponent<ScoreManager> ();
 	}
 	
 	// Update is called once per frame
@@ -21,10 +24,9 @@ public class FPCController : MonoBehaviour {
 				gun.Shot (hit.point);
 				gun.UseBullet ();
 				TargetController target = hit.collider.gameObject.GetComponent<TargetController> ();
-				print (hit.collider.gameObject.name);
-				print (hit.point);
 				if (target != null) {
 					target.Hit ();
+					score.CalcScore (hit.point);
 				}
 			}
 		}
