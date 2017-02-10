@@ -7,6 +7,7 @@ public class FPCController : MonoBehaviour {
 	[SerializeField] GameObject gunobj;
 	[SerializeField] GameObject scoreManager;
 	[SerializeField] LayerMask layermask;
+	[SerializeField] Camera camera;
 	[SerializeField] float offset;
 
 	GunController gun;
@@ -34,18 +35,27 @@ public class FPCController : MonoBehaviour {
 				}
 			}
 		}
+			
+		Reload ();
+		Snip ();
 
+	}
+
+	void Reload(){
 		if(Input.GetKeyDown(KeyCode.R)){
 			gun.ReloadBullet ();
 		}
+	}
 
+	void Snip(){
 		if (Input.GetMouseButton (1)) {
 			sniper = sniper * (-1);
 			if (sniper == -1) {
-				transform.position -= new Vector3 (0, 0, offset);
+				camera.fieldOfView += offset;
 			} else {
-				transform.position += new Vector3 (0, 0, offset);
+				camera.fieldOfView -= offset;
 			}
 		}
 	}
+		
 }

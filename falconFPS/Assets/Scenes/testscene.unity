@@ -1282,6 +1282,11 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_PrefabInternal: {fileID: 443126434}
+--- !u!20 &65079584 stripped
+Camera:
+  m_PrefabParentObject: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 2}
+  m_PrefabInternal: {fileID: 443126434}
 --- !u!114 &65079585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,7 +1303,8 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 256
-  offset: 5
+  camera: {fileID: 65079584}
+  offset: 30
   sniper: -1
 --- !u!1 &67560070
 GameObject:
@@ -6888,6 +6894,10 @@ Prefab:
       propertyPath: m_UseFovKick
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: field of view
+      value: 70
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
   m_IsPrefabParent: 0
@@ -7897,7 +7907,7 @@ RectTransform:
   m_GameObject: {fileID: 505682074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 9.143082, y: 4.086795, z: 1}
+  m_LocalScale: {x: 9.145244, y: 7.8246236, z: 1}
   m_Children: []
   m_Father: {fileID: 1110491405}
   m_RootOrder: 8
@@ -25220,7 +25230,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400192, guid: 70bd327581f110b4a936db6df5f9ed54, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1622421762}
-  m_LocalRotation: {x: 0.6122276, y: -0.36693394, z: -0.59888977, w: -0.3631361}
+  m_LocalRotation: {x: 0.6122277, y: -0.36693397, z: -0.5988898, w: -0.36313614}
   m_LocalPosition: {x: -6.393426, y: 1.3832966, z: 2.7329824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
