@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour {
 
-	[SerializeField] private int bulletBox;
-	[SerializeField] private int bullet;
+	[SerializeField] public int bulletBox;
+	[SerializeField] public int bullet;
 	[SerializeField] private GameObject firePrefs;
 	[SerializeField] private GameObject fireMuzzlePrefs;
 	[SerializeField] private AudioClip shotSound;
