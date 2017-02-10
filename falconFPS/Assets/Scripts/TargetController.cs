@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class TargetController : MonoBehaviour {
 
-	Animator anim;
+	[SerializeField] private Animator anim;
 	private int hitCount;
 
 	// Use this for initialization
 	void Start () {
-		anim =  transform.parent.gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame

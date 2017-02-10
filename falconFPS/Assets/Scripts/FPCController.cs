@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class FPCController : MonoBehaviour {
 
-	[SerializeField] GameObject gunobj;
-	[SerializeField] GameObject scoreManager;
+	[SerializeField] GunController gun;
+	[SerializeField] ScoreManager score;
 	[SerializeField] LayerMask layermask;
 	[SerializeField] Camera camera;
 	[SerializeField] float offset;
 
-	GunController gun;
-	ScoreManager score;
-
 	public int sniper = -1; // -1 : not sniper  1 : sniper
 	// Use this for initialization
 	void Start () {
-		gun = gunobj.GetComponent<GunController> ();
-		score = scoreManager.GetComponent<ScoreManager> ();
 	}
 	
 	// Update is called once per frame

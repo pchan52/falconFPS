@@ -11,8 +11,7 @@ public class GunController : MonoBehaviour {
 	[SerializeField] private AudioClip shotSound;
 	[SerializeField] private AudioClip reloadSound;
 	[SerializeField] private GameObject muzzle;
-
-	AudioSource audioSource;
+	[SerializeField] private AudioSource audioSource;
 
 	public bool isEmpty; 
 	private int useBullet;
@@ -21,7 +20,6 @@ public class GunController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		isEmpty = false;
-		audioSource = gameObject.GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame

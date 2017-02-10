@@ -1298,8 +1298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe896a9f9d124ec0afb37e23586014d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunobj: {fileID: 1964651659}
-  scoreManager: {fileID: 1163363172}
+  gun: {fileID: 1964651660}
+  score: {fileID: 1163363173}
   layermask:
     serializedVersion: 2
     m_Bits: 256
@@ -30854,6 +30854,11 @@ Prefab:
       value: 
       objectReference: {fileID: 1100061537418328, guid: 99c0e99342435452e86862c8d384e6d2,
         type: 2}
+    - target: {fileID: 114949634715404970, guid: 66007633ae0f04a159fdb5c5f4834ca1,
+        type: 2}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1964651661}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66007633ae0f04a159fdb5c5f4834ca1, type: 2}
   m_IsPrefabParent: 0
@@ -32066,17 +32071,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1949915005}
   m_Mesh: {fileID: 4300328, guid: 70bd327581f110b4a936db6df5f9ed54, type: 3}
---- !u!1 &1964651659 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1825374826224626, guid: 66007633ae0f04a159fdb5c5f4834ca1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1903807837}
 --- !u!114 &1964651660 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114949634715404970, guid: 66007633ae0f04a159fdb5c5f4834ca1,
     type: 2}
   m_PrefabInternal: {fileID: 1903807837}
   m_Script: {fileID: 11500000, guid: 9b71f29cbc1d545e6925b6b450daca79, type: 3}
+--- !u!82 &1964651661 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82712197346024556, guid: 66007633ae0f04a159fdb5c5f4834ca1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1903807837}
 --- !u!4 &1967505994 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400064, guid: db11c17b33390114c9f0fbe12909aa5e, type: 2}

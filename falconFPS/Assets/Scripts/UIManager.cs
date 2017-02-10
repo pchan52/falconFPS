@@ -5,17 +5,16 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour {
 
-	[SerializeField] Image Sniper;
-	[SerializeField] Text LeftTime;
-	[SerializeField] Text Score;
-	[SerializeField] Text Bullet;
-	[SerializeField] Text BulletBox;
-	[SerializeField] ScoreManager scoreManager;
-	[SerializeField] GunController gunController;
-	[SerializeField] FPCController FPCController;
+	[SerializeField] private Image Sniper;
+	[SerializeField] private Text LeftTime;
+	[SerializeField] private Text Score;
+	[SerializeField] private Text Bullet;
+	[SerializeField] private Text BulletBox;
+	[SerializeField] private ScoreManager scoreManager;
+	[SerializeField] private GunController gunController;
+	[SerializeField] private FPCController FPCController;
 
-	float time;
-
+	private float time;
 
 	// Use this for initialization
 	void Start () {
