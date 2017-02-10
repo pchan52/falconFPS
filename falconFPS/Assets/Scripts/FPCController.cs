@@ -6,6 +6,7 @@ public class FPCController : MonoBehaviour {
 
 	[SerializeField] GameObject gunobj;
 	[SerializeField] GameObject scoreManager;
+	[SerializeField] LayerMask layermask;
 
 	GunController gun;
 	ScoreManager score;
@@ -19,7 +20,7 @@ public class FPCController : MonoBehaviour {
 	void Update () {
 		Ray ray = new Ray(transform.position, transform.forward);
 		RaycastHit hit;
-		if (Physics.Raycast (ray, out hit)) {
+		if (Physics.Raycast (ray, out hit, layermask)) {
 			if (Input.GetMouseButton (0) && !gun.isEmpty) {
 				gun.Shot (hit.point);
 				gun.UseBullet ();
