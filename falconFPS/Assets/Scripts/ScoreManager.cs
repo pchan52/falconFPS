@@ -6,7 +6,7 @@ public class ScoreManager : MonoBehaviour {
 
 	[SerializeField] private GameObject HeadMarker;
 
-	private int score = 0;
+	public int score = 0;
 
 	// Use this for initialization
 	void Start () {
