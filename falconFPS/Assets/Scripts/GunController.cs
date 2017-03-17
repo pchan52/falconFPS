@@ -26,9 +26,9 @@ public class GunController : MonoBehaviour {
 	void Update () {
 	}
 		
-	public void Shot(Vector3 hitposition){
+	public void Shot(Vector3 hitposition, Vector3 raydirection){
 		GameObject firehit = Instantiate (firePrefs);
-		firehit.transform.position = hitposition - new Vector3 (0, 0, 0.5f);;
+	    firehit.transform.position = hitposition - raydirection;
 		GameObject firemuzzle = Instantiate (fireMuzzlePrefs);
 		firemuzzle.transform.position = muzzle.transform.position;
 		audioSource.PlayOneShot (shotSound);

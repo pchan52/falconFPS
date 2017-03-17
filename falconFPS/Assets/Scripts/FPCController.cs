@@ -21,7 +21,7 @@ public class FPCController : MonoBehaviour {
 		RaycastHit hit;
 		if (Physics.Raycast (ray, out hit, layermask)) {
 			if (Input.GetMouseButton (0) && !gun.isEmpty) {
-				gun.Shot (hit.point);
+				gun.Shot (hit.point, ray.direction);
 				gun.UseBullet ();
 				TargetController target = hit.collider.gameObject.GetComponent<TargetController> ();
 				if (target != null) {
@@ -30,10 +30,8 @@ public class FPCController : MonoBehaviour {
 				}
 			}
 		}
-			
 		Reload ();
 		Snip ();
-
 	}
 
 	void Reload(){

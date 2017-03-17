@@ -89,9 +89,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			if (Input.GetKey (KeyCode.C)) {
 				transform.position = new Vector3 (transform.position.x, squatHight, transform.position.z);
-			} else {
-				transform.position = new Vector3 (transform.position.x, nomalHight, transform.position.z);
 			}
+
 			
         }
 
